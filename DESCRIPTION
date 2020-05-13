@@ -1,0 +1,23 @@
+Package: frqit
+Title: 
+Date: 2020-05-13
+Version: 0.0.1
+Authors@R:
+  person(given="Matthew", family = "Vincent", role=c("aut", "cre"),
+           email = "matthewv@spci.int")
+Description: R functions to read and manipulate MFCL frq files in a more efficient and intuitive manner. Dependent on FLR4MFCL for head bits only and to convert to freq format if you are off your rocker.
+Depends: FLR4MFCL
+Imports: methods
+License: GPL-3 + file LICENSE
+Suggests: FLR4MFCL
+LazYData: No
+RoxygenNote: 7.1.0
+Remotes: PacificCommunity/ofp-sam-frqit
+URL: https://github.com/PacificCommunity/ofp-sam-frqit
+BugReports: https://github.com/PacificCommunity/ofp-sam-frqit/issues
+Collate: 
+    'FrqClasses.r'
+    'FrqAccessors.r'
+    'asOld.r'
+    'readfrq.r'
+    'writefrq.r'
