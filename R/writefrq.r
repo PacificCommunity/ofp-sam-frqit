@@ -22,7 +22,7 @@ setMethod("writefrq", signature(x="Frq"), function(x, file, append=F, ...){
     cat("# \n# Definition of fisheries \n# \n", file=file, append=T)
     cat("# Number of   Number of   Use generic   Number of     Year1 \n",  file=file, append=T)
     cat("#  Region     Fisheries    diffusion    tag groups \n", file=file, append=T)
-    cat(paste("", n_regions(x), n_fisheries(x), as.numeric(generic_diffusion(x)), n_tag_groups(x), sep='\t\t\t\t\t'), file=file, append=T)
+    cat(paste("", n_regions(x), n_fisheries(x), as.numeric(generic_diffusion(x)), n_tag_groups(x), sep='\t'), file=file, append=T)
     cat(paste("", range(x)['minyear'], "0", as.numeric(frq_age_len(x)), n_recs_yr(x), rec_month(x), frq_version(x), '\n', sep="\t"), file=file, append=T)
     cat("# Relative Region Size \n", file=file, append=T)
     write.table(matrix(region_size(x),nrow=1), file=file, append=T, col.names=F, row.names=F)
