@@ -92,7 +92,7 @@ setMethod("writefrq", signature(x="Frq"), function(x, file, append=F, ...){
 
     ## Length and weight
     if (length(WtMatcher[WtMatcher%in%LnMatcher])>0)
-        output[WtMatcher[WtMatcher%in%LnMatcher]]=paste(output[WtMatcher[WtMatcher%in%LnMatcher]], apply(lnfrq[LnMatcher%in%WtMatcher&WtMatcher!=0,-4:-1],1,paste,collapse=' '), apply(wtfrq[WtMatcher%in%LnMatcher&WtMatcher!=0,-4:-1],1,paste,collapse=' '),sep=' ')
+        output[WtMatcher[WtMatcher%in%LnMatcher]]=paste(output[WtMatcher[WtMatcher%in%LnMatcher]], apply(lnfrq[LnMatcher%in%WtMatcher&LnMatcher!=0,-4:-1],1,paste,collapse=' '), apply(wtfrq[WtMatcher%in%LnMatcher&WtMatcher!=0,-4:-1],1,paste,collapse=' '),sep=' ')
 
 
     cat(output,file=file,sep="\n",append=TRUE)
